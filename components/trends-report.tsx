@@ -9,8 +9,9 @@ export default function TrendsReport() {
           Top trends for the future of work
         </h2>
         <p className="text-gray-600 mb-4">
-          Explore the latest Global Learning & Skills Trends Report from Udemy
-          Business to discover the skills that will shape the future of work.
+          Explore the latest Global Learning & Skills Trends Report from
+          A1Schools Business to discover the skills that will shape the future
+          of work.
         </p>
         <Button className="text-purple-700 border-purple-800 bg-transparent border-1">
           Get the report

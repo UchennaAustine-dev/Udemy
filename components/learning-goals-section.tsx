@@ -262,7 +262,7 @@ export default function LearningGoalsSection() {
                       <span className="font-semibold">
                         Your performance was better than 85%
                       </span>{" "}
-                      of Udemy learners who have completed this assessment.
+                      of A1Schools learners who have completed this assessment.
                     </p>
                   </div>
                 </div>

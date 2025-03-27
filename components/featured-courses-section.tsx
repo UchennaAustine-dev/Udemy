@@ -13,7 +13,7 @@ export default function FeaturedCoursesSection() {
             reviewCount="461,287"
             price={89.99}
             salePrice={13.99}
-            imageUrl="/placeholder.svg?height=150&width=250"
+            imageUrl="/assets/learn.jpg"
             bestseller={true}
             badgeText="Highest Rated"
           />
@@ -24,7 +24,7 @@ export default function FeaturedCoursesSection() {
             reviewCount="154,741"
             price={94.99}
             salePrice={14.99}
-            imageUrl="/placeholder.svg?height=150&width=250"
+            imageUrl="/assets/fun.jpg"
             bestseller={false}
             badgeText="Bestseller"
           />
@@ -35,7 +35,7 @@ export default function FeaturedCoursesSection() {
             reviewCount="17,984"
             price={94.99}
             salePrice={14.99}
-            imageUrl="/placeholder.svg?height=150&width=250"
+            imageUrl="/assets/manage.jpg"
             bestseller={false}
           />
           <CourseCard
@@ -45,7 +45,7 @@ export default function FeaturedCoursesSection() {
             reviewCount="32,456"
             price={89.99}
             salePrice={13.99}
-            imageUrl="/placeholder.svg?height=150&width=250"
+            imageUrl="/assets/reading.jpg"
             bestseller={false}
           />
         </div>

@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm mb-4 md:mb-0">
             Top companies choose{" "}
-            <span className="text-purple-400">Udemy Business</span> to build
+            <span className="text-purple-400">A1Schools Business</span> to build
             in-demand career skills.
           </p>
           <div className="flex items-center space-x-8">
@@ -492,7 +492,7 @@ export default function Footer() {
 
             {/* Discovery column */}
             <div>
-              <h3 className="font-bold mb-4">Discovery Udemy</h3>
+              <h3 className="font-bold mb-4">Discovery A1Schools</h3>
               <ul className="space-y-2">
                 <li>
                   <Link
@@ -507,7 +507,7 @@ export default function Footer() {
                     href="#"
                     className="text-sm text-gray-300 hover:text-white"
                   >
-                    Teach on Udemy
+                    Teach on A1Schools
                   </Link>
                 </li>
                 <li>
@@ -537,16 +537,16 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Udemy for Business column */}
+            {/* A1Schools for Business column */}
             <div>
-              <h3 className="font-bold mb-4">Udemy for Business</h3>
+              <h3 className="font-bold mb-4">A1Schools for Business</h3>
               <ul className="space-y-2">
                 <li>
                   <Link
                     href="#"
                     className="text-sm text-gray-300 hover:text-white"
                   >
-                    Udemy Business
+                    A1Schools Business
                   </Link>
                 </li>
               </ul>
@@ -599,12 +599,12 @@ export default function Footer() {
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <Image
-              src="/assets/udemy-logo.png"
-              alt="Udemy"
+              src="/assets/A1Schools-logo.png"
+              alt="A1Schools"
               width={91}
               height={34}
             />
-            <p className="text-sm text-gray-400 mt-2">© 2025 Udemy, Inc.</p>
+            <p className="text-sm text-gray-400 mt-2">© 2025 A1Schools, Inc.</p>
           </div>
 
           <div className="flex items-center">
