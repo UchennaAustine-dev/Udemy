@@ -64,7 +64,7 @@ export default function LearningGoalsSection() {
             </div>
 
             {/* Insights and analytics card */}
-            <div className="bg-white rounded-lg border border-gray-200 p-6">
+            {/* <div className="bg-white rounded-lg border border-gray-200 p-6">
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
                   <Image
@@ -96,10 +96,10 @@ export default function LearningGoalsSection() {
                   </Link>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Customizable content card */}
-            <div className="bg-white rounded-lg border border-gray-200 p-6">
+            {/* <div className="bg-white rounded-lg border border-gray-200 p-6">
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
                   <Image
@@ -131,7 +131,7 @@ export default function LearningGoalsSection() {
                   </Link>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Right column with assessment card */}
@@ -332,7 +332,7 @@ export default function LearningGoalsSection() {
                             <p className="text-sm mt-1">
                               Which of the following scenarios will benefit most
                               from a managed Kubernetes service, such as GKE,
-                              EKS or Google Cloud's GKE?
+                              EKS or Google Cloud&apos;s GKE?
                             </p>
                           </div>
                         </div>
