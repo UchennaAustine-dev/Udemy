@@ -3,7 +3,7 @@ import Header from "@/components/header";
 import HeroSection from "@/components/hero-section";
 import SkillsSection from "@/components/skills-section";
 import FeaturedCoursesSection from "@/components/featured-courses-section";
-import TrustedBySection from "@/components/trusted-by-section";
+// import TrustedBySection from "@/components/trusted-by-section";
 import LearnersViewingSection from "@/components/learners-viewing-section";
 import LearningGoalsSection from "@/components/learning-goals-section";
 import AccelerateGrowthSection from "@/components/accelerate-growth-section";
@@ -33,7 +33,7 @@ export default function Home() {
         <FeaturedCoursesSection />
 
         {/* Trusted By Section */}
-        <TrustedBySection />
+        {/* <TrustedBySection /> */}
 
         {/* Learners are viewing Section */}
         <LearnersViewingSection />
