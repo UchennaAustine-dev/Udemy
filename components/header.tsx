@@ -15,7 +15,7 @@ export default function Header() {
               alt="A1Schools"
               width={91}
               height={34}
-              className="w-[150px]"
+              className="w-auto h-[150px]"
             />
           </Link>
           <div className="hidden md:block">

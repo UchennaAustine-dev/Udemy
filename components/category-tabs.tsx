@@ -155,7 +155,7 @@ export default function CategoryTabs() {
           <Button
             key={category.id}
             variant={activeTab === category.id ? "default" : "outline"}
-            className={`whitespace-nowrap text-xs ${
+            className={`whitespace-nowrap text-xs ₦{
               activeTab === category.id
                 ? "bg-black text-white hover:bg-gray-800"
                 : ""

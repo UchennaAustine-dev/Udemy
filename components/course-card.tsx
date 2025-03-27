@@ -61,7 +61,7 @@ export default function CourseCard({
           {[...Array(5)].map((_, i) => (
             <Star
               key={i}
-              className={`h-3 w-3 ${
+              className={`h-3 w-3 ₦{
                 i < Math.round(rating)
                   ? "fill-yellow-400 text-yellow-400"
                   : "fill-gray-200 text-gray-200"
@@ -73,11 +73,11 @@ export default function CourseCard({
       </div>
       <div className="flex items-center">
         <span className="font-bold text-sm">
-          ${salePrice?.toFixed(2) || price.toFixed(2)}
+          ₦{salePrice?.toFixed(2) || price.toFixed(2)}
         </span>
         {salePrice && (
           <span className="text-xs text-gray-600 line-through ml-2">
-            ${price.toFixed(2)}
+            ₦{price.toFixed(2)}
           </span>
         )}
       </div>

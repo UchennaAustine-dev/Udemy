@@ -8,7 +8,7 @@ export default function HeroSection() {
           <h1 className="text-3xl font-bold mb-4">Keep moving up</h1>
           <p className="text-base mb-0">
             Learn the skills you need to take the next step — and every step
-            after. Log in to access courses from $13.99.
+            after. Log in to access courses from ₦13.99.
           </p>
         </div>
         <div className="hidden md:block ml-auto">

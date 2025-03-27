@@ -26,7 +26,7 @@ export default function AccelerateGrowthSection() {
 
             <div className="mb-6">
               <h4 className="font-bold text-gray-800">
-                Starting at $20.00 per month
+                Starting at ₦20.00 per month
               </h4>
               <p className="text-xs text-gray-600">
                 Billed monthly or annually. Cancel anytime.
@@ -69,7 +69,7 @@ export default function AccelerateGrowthSection() {
 
             <div className="mb-6">
               <h4 className="font-bold text-gray-800">
-                $30.00 a month per user
+                ₦30.00 a month per user
               </h4>
               <p className="text-xs text-gray-600">
                 Billed annually. Cancel anytime.
