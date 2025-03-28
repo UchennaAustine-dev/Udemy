@@ -1,5 +1,4 @@
-import { Check, ArrowRight, Users } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Check } from "lucide-react";
 
 export default function AccelerateGrowthSection() {
   return (
@@ -16,26 +15,6 @@ export default function AccelerateGrowthSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Enterprise Plan */}
           <div className="bg-purple-50 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-gray-800">Enterprise Plan</h3>
-            <p className="text-sm text-gray-600 mb-4">
-              For your whole organization
-            </p>
-
-            <div className="flex items-center mb-6">
-              <Users className="h-5 w-5 text-gray-600 mr-2" />
-              <span className="text-sm text-gray-600">More than 20 people</span>
-            </div>
-
-            <div className="mb-6">
-              <h4 className="font-bold text-gray-800">
-                Contact sales for pricing
-              </h4>
-            </div>
-
-            <Button className="w-full bg-purple-700 hover:bg-purple-800 mb-6 flex items-center justify-center">
-              Request a demo <ArrowRight className="h-4 w-4 ml-2" />
-            </Button>
-
             <ul className="space-y-3">
               <li className="flex items-start">
                 <Check className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
