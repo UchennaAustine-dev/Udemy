@@ -61,7 +61,7 @@ export default function CourseCard({
           {[...Array(5)].map((_, i) => (
             <Star
               key={i}
-              className={`h-3 w-3 ₦{
+              className={`h-3 w-3 ${
                 i < Math.round(rating)
                   ? "fill-yellow-400 text-yellow-400"
                   : "fill-gray-200 text-gray-200"

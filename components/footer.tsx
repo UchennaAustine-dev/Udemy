@@ -4,7 +4,7 @@ import { Globe } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1c1d1f] text-white">
+    <footer className="bg-[#00077a] text-white">
       {/* Top companies section */}
       <div className="border-b border-gray-700 py-6">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
