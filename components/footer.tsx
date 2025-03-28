@@ -6,45 +6,6 @@ export default function Footer() {
   return (
     <footer className="bg-[#00077a] text-white">
       {/* Top companies section */}
-      <div className="border-b border-gray-700 py-6">
-        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm mb-4 md:mb-0">
-            Top companies choose{" "}
-            <span className="text-purple-400">A1Schools Business</span> to build
-            in-demand career skills.
-          </p>
-          <div className="flex items-center space-x-8">
-            <Image
-              src="/placeholder.svg?height=30&width=80"
-              alt="Nasdaq"
-              width={80}
-              height={30}
-              className="h-8 object-contain"
-            />
-            <Image
-              src="/placeholder.svg?height=30&width=40"
-              alt="Volkswagen"
-              width={40}
-              height={30}
-              className="h-8 object-contain"
-            />
-            <Image
-              src="/placeholder.svg?height=30&width=80"
-              alt="NetApp"
-              width={80}
-              height={30}
-              className="h-8 object-contain"
-            />
-            <Image
-              src="/placeholder.svg?height=30&width=80"
-              alt="Eventbrite"
-              width={80}
-              height={30}
-              className="h-8 object-contain"
-            />
-          </div>
-        </div>
-      </div>
 
       {/* Main links section */}
 
@@ -208,7 +169,7 @@ export default function Footer() {
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <Image
-              src="/assets/A1Schools-logo.png"
+              src="/assets/logo.png"
               alt="A1Schools"
               width={91}
               height={34}
