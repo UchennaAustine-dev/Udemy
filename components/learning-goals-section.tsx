@@ -18,7 +18,7 @@ export default function LearningGoalsSection() {
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
                   <Image
-                    src="/placeholder.svg?height=50&width=50"
+                    src="/assets/hand.webp"
                     alt="Hands-on training"
                     width={50}
                     height={50}
@@ -40,7 +40,7 @@ export default function LearningGoalsSection() {
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
                   <Image
-                    src="/placeholder.svg?height=50&width=50"
+                    src="/assets/certificate.webp"
                     alt="Certification prep"
                     width={50}
                     height={50}
