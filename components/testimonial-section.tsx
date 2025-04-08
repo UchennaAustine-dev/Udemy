@@ -10,7 +10,7 @@ export default function TestimonialSection() {
         "I was promoted to a lead position within a month of completing the course. Now I'm building a team and teaching them the same skills I learned.",
       author: "Jane Doe",
       company: "Marketing Manager",
-      avatar: "/placeholder.svg?height=50&width=50",
+      avatar: "/assets/marketing.jpg",
     },
     {
       id: 2,
@@ -18,7 +18,7 @@ export default function TestimonialSection() {
         "The courses helped me go from a complete beginner to landing my first developer job in just 6 months. The instructors are amazing!",
       author: "John Smith",
       company: "Software Developer",
-      avatar: "/placeholder.svg?height=50&width=50",
+      avatar: "/assets/headshot.jpeg",
     },
     {
       id: 3,
@@ -26,7 +26,7 @@ export default function TestimonialSection() {
         "As a small business owner, I needed to learn digital marketing fast. These courses gave me the skills to grow my business by 150% in one year.",
       author: "Emily Johnson",
       company: "Business Owner",
-      avatar: "/placeholder.svg?height=50&width=50",
+      avatar: "/assets/headshot.jpeg",
     },
     {
       id: 4,
@@ -34,7 +34,7 @@ export default function TestimonialSection() {
         "The data science courses helped me transition from academia to industry. I now work at a top tech company with a much better salary.",
       author: "Michael Chen",
       company: "Data Scientist",
-      avatar: "/placeholder.svg?height=50&width=50",
+      avatar: "/assets/headshot.jpeg",
     },
   ];
 

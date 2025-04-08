@@ -18,7 +18,7 @@ export default function LearningGoalsSection() {
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
                   <Image
-                    src="/placeholder.svg?height=50&width=50"
+                    src="/assets/hand.webp"
                     alt="Hands-on training"
                     width={50}
                     height={50}
@@ -40,7 +40,7 @@ export default function LearningGoalsSection() {
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
                   <Image
-                    src="/placeholder.svg?height=50&width=50"
+                    src="/assets/certificate.webp"
                     alt="Certification prep"
                     width={50}
                     height={50}
@@ -64,7 +64,7 @@ export default function LearningGoalsSection() {
             </div>
 
             {/* Insights and analytics card */}
-            <div className="bg-white rounded-lg border border-gray-200 p-6">
+            {/* <div className="bg-white rounded-lg border border-gray-200 p-6">
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
                   <Image
@@ -96,10 +96,10 @@ export default function LearningGoalsSection() {
                   </Link>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Customizable content card */}
-            <div className="bg-white rounded-lg border border-gray-200 p-6">
+            {/* <div className="bg-white rounded-lg border border-gray-200 p-6">
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
                   <Image
@@ -131,7 +131,7 @@ export default function LearningGoalsSection() {
                   </Link>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Right column with assessment card */}
@@ -262,7 +262,7 @@ export default function LearningGoalsSection() {
                       <span className="font-semibold">
                         Your performance was better than 85%
                       </span>{" "}
-                      of Udemy learners who have completed this assessment.
+                      of A1Schools learners who have completed this assessment.
                     </p>
                   </div>
                 </div>
@@ -332,7 +332,7 @@ export default function LearningGoalsSection() {
                             <p className="text-sm mt-1">
                               Which of the following scenarios will benefit most
                               from a managed Kubernetes service, such as GKE,
-                              EKS or Google Cloud's GKE?
+                              EKS or Google Cloud&apos;s GKE?
                             </p>
                           </div>
                         </div>

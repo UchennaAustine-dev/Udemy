@@ -11,10 +11,11 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <Link href="/" className="flex items-center">
             <Image
-              src="/assets/udemy-logo.png"
-              alt="Udemy"
+              src="/assets/logo.png"
+              alt="A1Schools"
               width={91}
               height={34}
+              className="w-auto h-[50px]"
             />
           </Link>
           <div className="hidden md:block">
@@ -41,13 +42,13 @@ export default function Header() {
             variant="ghost"
             className="hidden lg:flex text-sm font-normal"
           >
-            Udemy Business
+            A1Schools Business
           </Button>
           <Button
             variant="ghost"
             className="hidden lg:flex text-sm font-normal"
           >
-            Teach on Udemy
+            Teach on A1Schools
           </Button>
           <Button variant="ghost" size="icon" className="hidden sm:flex">
             <ShoppingCart className="h-5 w-5" />

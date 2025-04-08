@@ -73,11 +73,11 @@ export default function CourseCard({
       </div>
       <div className="flex items-center">
         <span className="font-bold text-sm">
-          ${salePrice?.toFixed(2) || price.toFixed(2)}
+          ₦{salePrice?.toFixed(2) || price.toFixed(2)}
         </span>
         {salePrice && (
           <span className="text-xs text-gray-600 line-through ml-2">
-            ${price.toFixed(2)}
+            ₦{price.toFixed(2)}
           </span>
         )}
       </div>

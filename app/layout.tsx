@@ -11,9 +11,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Udemy - Online Courses",
+  title: "A1Schools - Online Courses",
   description:
-    "Learn on your schedule with Udemy. Online courses in virtually any field.",
+    "Learn on your schedule with A1Schools. Online courses in virtually any field.",
 };
 
 export default function RootLayout({
@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} font-sans`}>
+      <body className={`₦{poppins.variable} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           {children}
         </ThemeProvider>
