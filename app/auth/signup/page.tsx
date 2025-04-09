@@ -45,9 +45,10 @@ export default function SignUpPage() {
     try {
       // Convert fullname to name for the API
       const signupData = {
-        name: values.fullname,
+        fullname: values.fullname,
         email: values.email,
         password: values.password,
+        confirm_password: values.confirm_password
       };
 
       const result = await signup(signupData).unwrap();

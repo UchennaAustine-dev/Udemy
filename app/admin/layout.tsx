@@ -14,9 +14,9 @@ export default function AdminLayout({
   const router = useRouter();
 
   useEffect(() => {
-    if (!isLoading && (!isAuthenticated || user?.role !== "admin")) {
-      router.push("/auth/login");
-    }
+    // if (!isLoading && (!isAuthenticated || user?.role !== "admin")) {
+    //   router.push("/auth/login");
+    // }
   }, [isLoading, isAuthenticated, user, router]);
 
   if (isLoading) {
@@ -28,9 +28,9 @@ export default function AdminLayout({
     );
   }
 
-  if (!isAuthenticated || user?.role !== "admin") {
-    return null;
-  }
+  // if (!isAuthenticated || user?.role !== "admin") {
+  //   return null;
+  // }
 
   return (
     <div className="min-h-screen bg-gray-50">

@@ -1,4 +1,6 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import Cookie from "js-cookie";
 
 interface User {
   id: string;
@@ -28,7 +30,7 @@ const initialState: AuthState = {
 };
 
 const authSlice = createSlice({
-  name: 'auth',
+  name: "auth",
   initialState,
   reducers: {
     setCredentials: (
@@ -37,6 +39,10 @@ const authSlice = createSlice({
     ) => {
       state.user = action.payload.data;
       state.token = action.payload.token;
+      Cookie.set("token", action.payload.token, {
+        expires: 7,
+        secure: process.env.NODE_ENV === "production",
+      });
       state.isAuthenticated = true;
       state.error = null;
     },
@@ -44,6 +50,7 @@ const authSlice = createSlice({
       state.user = null;
       state.token = null;
       state.isAuthenticated = false;
+      Cookie.remove("token");
     },
     setError: (state, action: PayloadAction<string>) => {
       state.error = action.payload;
@@ -54,5 +61,6 @@ const authSlice = createSlice({
   },
 });
 
-export const { setCredentials, logout, setError, setLoading } = authSlice.actions;
-export default authSlice.reducer; 
+export const { setCredentials, logout, setError, setLoading } =
+  authSlice.actions;
+export default authSlice.reducer;

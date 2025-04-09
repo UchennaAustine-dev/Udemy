@@ -1,4 +1,4 @@
-import { baseApi } from './baseApi';
+import { baseApi } from "./baseApi";
 
 export interface Course {
   id: string;
@@ -61,52 +61,60 @@ export const courseApi = baseApi.injectEndpoints({
     // Course endpoints
     createCourse: builder.mutation<Course, CreateCourseRequest>({
       query: (body) => ({
-        url: '/courses',
-        method: 'POST',
+        url: "/courses",
+        method: "POST",
         body,
       }),
-      invalidatesTags: ['Course'],
+      invalidatesTags: ["Course"],
     }),
     getCourses: builder.query<Course[], void>({
-      query: () => '/courses',
-      providesTags: ['Course'],
+      query: () => "/courses",
+      providesTags: ["Course"],
+      transformResponse: (r: { data: Course[] }) => r.data,
     }),
     getCourse: builder.query<Course, string>({
       query: (id) => `/courses/${id}`,
-      providesTags: ['Course'],
+      providesTags: ["Course"],
     }),
-    updateCourse: builder.mutation<Course, { id: string; body: UpdateCourseRequest }>({
+    updateCourse: builder.mutation<
+      Course,
+      { id: string; body: UpdateCourseRequest }
+    >({
       query: ({ id, body }) => ({
         url: `/courses/${id}`,
-        method: 'PUT',
+        method: "PUT",
         body,
       }),
-      invalidatesTags: ['Course'],
+      invalidatesTags: ["Course"],
     }),
     deleteCourse: builder.mutation<void, string>({
       query: (id) => ({
         url: `/courses/${id}`,
-        method: 'DELETE',
+        method: "DELETE",
       }),
-      invalidatesTags: ['Course'],
+      invalidatesTags: ["Course"],
     }),
 
     // Module endpoints
-    createModule: builder.mutation<Module, { courseId: string; body: CreateModuleRequest }>({
+    createModule: builder.mutation<
+      Module,
+      { courseId: string; body: CreateModuleRequest }
+    >({
       query: ({ courseId, body }) => ({
         url: `/courses/${courseId}/modules`,
-        method: 'POST',
+        method: "POST",
         body,
       }),
-      invalidatesTags: ['Module'],
+      invalidatesTags: ["Module"],
     }),
     getModules: builder.query<Module[], string>({
       query: (courseId) => `/courses/${courseId}/modules`,
-      providesTags: ['Module'],
+      providesTags: ["Module"],
     }),
     getModule: builder.query<Module, { courseId: string; moduleId: string }>({
-      query: ({ courseId, moduleId }) => `/courses/${courseId}/modules/${moduleId}`,
-      providesTags: ['Module'],
+      query: ({ courseId, moduleId }) =>
+        `/courses/${courseId}/modules/${moduleId}`,
+      providesTags: ["Module"],
     }),
     updateModule: builder.mutation<
       Module,
@@ -114,17 +122,20 @@ export const courseApi = baseApi.injectEndpoints({
     >({
       query: ({ courseId, moduleId, body }) => ({
         url: `/courses/${courseId}/modules/${moduleId}`,
-        method: 'PUT',
+        method: "PUT",
         body,
       }),
-      invalidatesTags: ['Module'],
+      invalidatesTags: ["Module"],
     }),
-    deleteModule: builder.mutation<void, { courseId: string; moduleId: string }>({
+    deleteModule: builder.mutation<
+      void,
+      { courseId: string; moduleId: string }
+    >({
       query: ({ courseId, moduleId }) => ({
         url: `/courses/${courseId}/modules/${moduleId}`,
-        method: 'DELETE',
+        method: "DELETE",
       }),
-      invalidatesTags: ['Module'],
+      invalidatesTags: ["Module"],
     }),
 
     // Lesson endpoints
@@ -134,33 +145,41 @@ export const courseApi = baseApi.injectEndpoints({
     >({
       query: ({ courseId, moduleId, body }) => ({
         url: `/courses/${courseId}/modules/${moduleId}/lessons`,
-        method: 'POST',
+        method: "POST",
         body,
       }),
-      invalidatesTags: ['Lesson'],
+      invalidatesTags: ["Lesson"],
     }),
-    getLessons: builder.query<Lesson[], { courseId: string; moduleId: string }>({
-      query: ({ courseId, moduleId }) => `/courses/${courseId}/modules/${moduleId}/lessons`,
-      providesTags: ['Lesson'],
-    }),
+    getLessons: builder.query<Lesson[], { courseId: string; moduleId: string }>(
+      {
+        query: ({ courseId, moduleId }) =>
+          `/courses/${courseId}/modules/${moduleId}/lessons`,
+        providesTags: ["Lesson"],
+      }
+    ),
     getLesson: builder.query<
       Lesson,
       { courseId: string; moduleId: string; lessonId: string }
     >({
       query: ({ courseId, moduleId, lessonId }) =>
         `/courses/${courseId}/modules/${moduleId}/lessons/${lessonId}`,
-      providesTags: ['Lesson'],
+      providesTags: ["Lesson"],
     }),
     updateLesson: builder.mutation<
       Lesson,
-      { courseId: string; moduleId: string; lessonId: string; body: UpdateLessonRequest }
+      {
+        courseId: string;
+        moduleId: string;
+        lessonId: string;
+        body: UpdateLessonRequest;
+      }
     >({
       query: ({ courseId, moduleId, lessonId, body }) => ({
         url: `/courses/${courseId}/modules/${moduleId}/lessons/${lessonId}`,
-        method: 'PUT',
+        method: "PUT",
         body,
       }),
-      invalidatesTags: ['Lesson'],
+      invalidatesTags: ["Lesson"],
     }),
     deleteLesson: builder.mutation<
       void,
@@ -168,9 +187,9 @@ export const courseApi = baseApi.injectEndpoints({
     >({
       query: ({ courseId, moduleId, lessonId }) => ({
         url: `/courses/${courseId}/modules/${moduleId}/lessons/${lessonId}`,
-        method: 'DELETE',
+        method: "DELETE",
       }),
-      invalidatesTags: ['Lesson'],
+      invalidatesTags: ["Lesson"],
     }),
   }),
 });
@@ -191,4 +210,4 @@ export const {
   useGetLessonQuery,
   useUpdateLessonMutation,
   useDeleteLessonMutation,
-} = courseApi; 
+} = courseApi;

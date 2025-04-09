@@ -1,9 +1,10 @@
 import { baseApi } from './baseApi';
 
 interface SignUpRequest {
+  confirm_password: string;
   email: string;
+  fullname: string;
   password: string;
-  name: string;
 }
 
 interface LoginRequest {
