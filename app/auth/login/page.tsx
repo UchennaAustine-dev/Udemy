@@ -40,6 +40,7 @@ export default function LoginPage() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       const result = await login(values).unwrap();
+      console.debug({result})
       dispatch(setCredentials(result));
       router.push("/");
     } catch (error) {

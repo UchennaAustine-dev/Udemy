@@ -41,6 +41,7 @@ export const authApi = baseApi.injectEndpoints({
         method: 'POST',
         body: credentials,
       }),
+      transformResponse: (r: {data: AuthResponse}) => r.data
     }),
     verifyEmail: builder.mutation<{ message: string }, VerifyEmailRequest>({
       query: (data) => ({
