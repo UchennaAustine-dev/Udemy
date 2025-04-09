@@ -43,8 +43,15 @@ export default function SignUpPage() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      const result = await signup(values).unwrap();
-      dispatch(setCredentials(result));
+      // Convert fullname to name for the API
+      const signupData = {
+        name: values.fullname,
+        email: values.email,
+        password: values.password,
+      };
+
+      const result = await signup(signupData).unwrap();
+      dispatch(setCredentials({ data: result.data, token: result.data.token }));
       router.push(`/auth/verify?email=${encodeURIComponent(values.email)}`);
     } catch (error) {
       console.error("Signup failed:", error);

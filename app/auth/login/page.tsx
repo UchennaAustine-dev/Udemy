@@ -40,10 +40,9 @@ export default function LoginPage() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       const result = await login(values).unwrap();
-      console.debug({result})
-      dispatch(setCredentials(result));
+      dispatch(setCredentials({ data: result.data, token: result.data.token }));
       router.push("/");
-    } catch (error) {
+    } catch (error: any) {
       console.error("Login failed:", error);
     }
   }

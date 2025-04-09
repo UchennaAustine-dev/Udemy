@@ -17,13 +17,18 @@ interface VerifyEmailRequest {
 }
 
 interface AuthResponse {
-  user: {
-    id: string;
-    name: string;
+  message: string;
+  data: {
+    fullname: string;
     email: string;
-    role: string;
+    id: string;
+    verified: boolean;
+    image_link: string | null;
+    token: string;
+    roles: Array<{ name: string }>;
+    categories: string[];
+    wallet: { balance: number } | null;
   };
-  token: string;
 }
 
 export const authApi = baseApi.injectEndpoints({
@@ -41,7 +46,6 @@ export const authApi = baseApi.injectEndpoints({
         method: 'POST',
         body: credentials,
       }),
-      transformResponse: (r: {data: AuthResponse}) => r.data
     }),
     verifyEmail: builder.mutation<{ message: string }, VerifyEmailRequest>({
       query: (data) => ({
@@ -56,7 +60,7 @@ export const authApi = baseApi.injectEndpoints({
         method: 'POST',
       }),
     }),
-    getMe: builder.query<AuthResponse['user'], void>({
+    getMe: builder.query<AuthResponse['data'], void>({
       query: () => ({
         url: '/auth/me',
         method: 'GET',
