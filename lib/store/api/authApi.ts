@@ -11,6 +11,11 @@ interface LoginRequest {
   password: string;
 }
 
+interface VerifyEmailRequest {
+  email: string;
+  code: string;
+}
+
 interface AuthResponse {
   user: {
     id: string;
@@ -25,7 +30,7 @@ export const authApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
     signup: builder.mutation<AuthResponse, SignUpRequest>({
       query: (credentials) => ({
-        url: '/auth/signup',
+        url: '/auth/register',
         method: 'POST',
         body: credentials,
       }),
@@ -35,6 +40,13 @@ export const authApi = baseApi.injectEndpoints({
         url: '/auth/login',
         method: 'POST',
         body: credentials,
+      }),
+    }),
+    verifyEmail: builder.mutation<{ message: string }, VerifyEmailRequest>({
+      query: (data) => ({
+        url: '/auth/verify-email',
+        method: 'POST',
+        body: data,
       }),
     }),
     logout: builder.mutation<void, void>({
@@ -64,4 +76,5 @@ export const {
   useLogoutMutation,
   useGetMeQuery,
   useRefreshTokenMutation,
+  useVerifyEmailMutation,
 } = authApi; 

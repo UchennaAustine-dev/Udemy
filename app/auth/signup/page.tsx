@@ -21,9 +21,10 @@ import { setCredentials } from "@/lib/store/slices/authSlice";
 import Link from "next/link";
 
 const formSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
+  fullname: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Invalid email address"),
   password: z.string().min(6, "Password must be at least 6 characters"),
+  confirm_password: z.string().min(6, "Password must be at least 6 characters"),
 });
 
 export default function SignUpPage() {
@@ -33,9 +34,10 @@ export default function SignUpPage() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: "",
+      fullname: "",
       email: "",
       password: "",
+      confirm_password: "",
     },
   });
 
@@ -43,7 +45,7 @@ export default function SignUpPage() {
     try {
       const result = await signup(values).unwrap();
       dispatch(setCredentials(result));
-      router.push("/");
+      router.push(`/auth/verify?email=${encodeURIComponent(values.email)}`);
     } catch (error) {
       console.error("Signup failed:", error);
     }
@@ -64,7 +66,7 @@ export default function SignUpPage() {
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <FormField
               control={form.control}
-              name="name"
+              name="fullname"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Name</FormLabel>
@@ -96,6 +98,20 @@ export default function SignUpPage() {
                   <FormLabel>Password</FormLabel>
                   <FormControl>
                     <Input type="password" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="confirm_password"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Confirm Password</FormLabel>
+                  <FormControl>
+                    <Input type="confirm_password" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
